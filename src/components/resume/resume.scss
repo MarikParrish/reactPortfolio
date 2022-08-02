@@ -1,0 +1,107 @@
+.resume{
+    background:#ebebeb;
+    margin-top: 130px;
+    padding:120px 0 150px 0;
+    &__title{
+        text-align: center;
+    }
+
+    &__subtitle{
+        text-align: center;
+    }
+
+    &__education{
+        text-align: center;
+        font-size: 28px;
+        letter-spacing: unset;
+        margin-top: 60px;
+        font-weight: 600;
+        text-transform: unset;
+    }
+
+    &__block{
+        position: relative;
+        display: grid;
+        grid-template-columns: 320px 100px minmax(500px,650px);
+        grid-template-rows:repeat(3,auto);
+        grid-auto-rows: 90px;
+        column-gap:12px;
+        // justify-content: space-between;
+        margin-top: 25px;
+    }
+
+    &__wrapper{
+        margin-top: 60px;
+    }
+
+    &__item{
+        &-descr{
+            font-size: 18px;
+            color:#585858;
+            line-height: 2rem;
+        }
+        &-degree{
+            text-align: right;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        &-data{
+            color:#585858;
+            text-align: right;
+            font-size: 16px;
+        }
+
+
+
+
+        &-icon{
+            position: relative;
+            display: flex;
+            width: 50px;
+            height: 50px;
+            background:#000;
+            color:#fff;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius:50%;
+            z-index:1;
+        }
+
+
+
+
+
+        &-title{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        &-divider{
+            margin:15px 0;
+            width: 50px;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &__line{
+        display:grid;
+        &:before{
+            position: absolute;
+            content:'';
+            background: rgba(0, 0, 0, 0.2);
+            height: calc(100% + 30px);
+            width: 1px;
+            left: 357px;
+            top: -10px;
+            z-index:0;
+        }
+    }
+
+    &__formation{
+        // grid-column: 3/4;
+        // grid-row:1/2;
+        width: 290px;
+    }
+}

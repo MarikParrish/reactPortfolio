@@ -1,0 +1,116 @@
+.about {
+    padding-top: 120px;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__intro {
+        display: flex;
+        margin-top: 35px;
+        justify-content: center;
+    }
+
+    &__photo {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        align-self: center;
+    }
+
+    &__descr {
+        width: 739px;
+        margin-left: 55px;
+        line-height: 1.8;
+        color: #888888;
+        font-size: 20px;
+    }
+
+
+    &__wrapper {
+        margin-top: 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 390px);
+        justify-content: center;
+        column-gap: 100px;
+    }
+
+    &__main, &__main-info {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    &__text {
+        margin-top: 25px;
+        color: #636363;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    &__info {
+        display: grid;
+        grid-template-rows: repeat(3, 70px);
+        grid-auto-rows: 70px;
+        flex-direction: column;
+        margin-top: 30px;
+
+        &-item {
+
+            // margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-descr {
+            color: #636363;
+            font-size: 15px;
+        }
+
+        &-bar {
+            width: 100%;
+            background: #a1a1a1;
+            height: 6px;
+
+            div {
+                position: relative;
+                display: block;
+                height: 100%;
+                background: #000;
+
+                span {
+                    position: absolute;
+                    width: 40px;
+                    height: 28px;
+                    text-align: center;
+                    right: 0;
+                    top: -40px;
+                    display: block;
+                    color: white;
+                    font-size: 10px;
+                    line-height: 1;
+                    background: #313131;
+                    padding: 0.6rem 0.6rem;
+                    border-radius: 3px;
+
+                    &:after {
+                        position: absolute;
+                        left: 50%;
+                        bottom: -5px;
+                        margin-left: -5px;
+                        border-right: 5px solid transparent;
+                        border-left: 5px solid transparent;
+                        border-top: 5px solid #313131;
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}

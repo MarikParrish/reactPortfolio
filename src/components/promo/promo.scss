@@ -1,0 +1,205 @@
+@import '../../style/base/_variables.scss';
+
+html,body{
+    height: 100%;
+}
+
+body{
+    position: relative;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        color:#fff;
+    }
+}
+
+.container{
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+
+.grey{
+    background:#ebebeb;
+    min-height: 192px;
+    width: 100%;
+}
+
+
+
+.promo{
+    position: relative;
+    display: flex;
+    background: url('./img/intro-bg.jpg')  center bottom 20%/cover no-repeat fixed;
+    height: 100vh;
+    width: 100%;
+
+    &__overlay{
+        position: absolute;
+        background:#111111;
+        opacity:.85;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        flex-wrap:wrap;
+    }
+
+    &__title{
+        color:#cc005f;
+        letter-spacing: .1rem;
+        line-height: 30px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    &__subtitle{
+        margin-top: 5px;
+        line-height: 70px;
+        color:#fff;
+        font-weight: 400;
+        font-size: 60px;
+    }
+
+    &__info{
+        margin-top: 10px;
+        font-size: 20px;
+        color:#fff;
+        text-transform: uppercase;
+        letter-spacing:.2rem;
+        padding: 0 20px;
+        line-height: 20px;
+        text-align: center;
+        border-right:1px solid gray;
+        border-left:1px solid gray;
+    }
+    
+    &__btn{
+        position: relative;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#fff;
+        font-size: 18px;
+        border: 3px solid #313131;
+        min-width: 220px;
+        text-transform: uppercase;
+        height: 60px;
+        letter-spacing: .25rem;
+        border-color: rgba(255, 255, 255, 0.3);
+        transition: 0.5s all;
+        font-weight: 600;
+        text-decoration: none;
+        &:after{
+            position: absolute;
+            content: "\f107";
+            font-family: "Font Awesome 5 Free";
+            font-size: 12px;
+            color:#888888;
+            left: 12rem;
+            top: 18px;
+        }
+        &:hover{
+            border-color:#cc005f;
+            color:#fff;
+        }
+    }
+
+    &__icons{
+        position: absolute;
+        bottom:50px;
+        left: 50%;
+        transform: translate(-50%);
+        // padding-right: 1.5rem;
+        a{
+            padding-left: 3.5rem;
+            &:first-child{
+                padding-left: 0;
+            }
+        }
+        svg{
+            color:#fff;
+            font-size: 40px;
+            transition:0.5s all;
+            &:hover{
+                color:#cc005f;
+            }
+        }
+    }
+
+    &__change{
+        &_lang{
+            display: flex;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            button{
+                text-align: center;
+                border:none;
+                border:2px solid #fff;
+                width: 35px;
+                height: 35px;
+                font-size: 15px;
+                background:unset;
+                margin-top: 15px;
+                margin-right: 8px;
+                border-radius:20%;
+                font-weight: bold;
+                transition: all 0.5s;
+                &:hover{
+                    color:$main-color;
+                    font-weight: bold;
+                    border-color:$main-color;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+            
+            
+            &-ru, &-en, &-ua{
+                color:#fff;
+                text-transform: uppercase;
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    &:hover{
+                        width: 90%;
+                        height: 90%;
+                    }
+                }
+            }
+
+            &-active{
+                border-color:$main-color !important;
+                font-weight: bold;
+                color:$main-color;
+            }
+        }
+    }
+}

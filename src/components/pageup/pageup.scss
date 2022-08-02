@@ -1,0 +1,44 @@
+@import '../../style/base/variables';
+
+.pageup{
+    display: inline;
+    position: fixed;
+    width: 50px;
+    height: 70px;
+    background:$main-color;
+    bottom: 40px;
+    right: 20px;
+    color:#fff;
+    &:hover{
+        color:#fff;
+    }
+
+    svg{
+        position: absolute;
+        font-size: 20px;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    &__animation{
+        &-enter{
+            opacity:0;
+            transform: scale(0.5);
+            &-active{
+                opacity:1;
+                transform: translateX(0);
+                transition: all 0.3s;
+            }
+        }
+
+        &-exit{
+            opacity:1;
+            &-active{
+                opacity:0;
+                transform: scale(0.5);
+                transition: all .3s;
+            }
+        }
+    }
+}

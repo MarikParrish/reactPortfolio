@@ -1,0 +1,50 @@
+@media (max-width:1200px){
+    .container{
+        max-width: 960px;
+    }
+
+    .title{
+        &_subtitle{
+            font-size: 34px;
+        }
+    }
+}
+
+@media (max-width:992px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        max-width: 540px;
+    }
+
+    .title{
+        &_main{
+            font-size: 17px;
+        }
+        &_subtitle{
+            font-size: 28px;
+        }
+        
+        &_text{
+            width: unset;
+            font-size: 15px;
+            line-height: 1.5rem;
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width:576px){
+    .container{
+        max-width: 100%;
+        padding:0 15px;
+    }
+
+    .grey{
+        min-height: 120px;
+    }
+}

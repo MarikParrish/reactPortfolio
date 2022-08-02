@@ -1,0 +1,118 @@
+@import '../../style/base/_variables.scss';
+
+.services{
+    position: relative;
+    background:url('./img/bg.jpg') center center/cover no-repeat;
+    width: 100%;
+    padding: 100px 0 100px 0;
+
+    // &__dots{
+    //     width: 16px;
+    //     height: 16px;
+    //     border-radius:100%;
+    //     margin-right: 10px;
+    //     margin-top: 20px;
+    //     &:last-child{
+    //         margin: 0;
+    //     }
+    //     &.active{
+    //         background:$main-color;
+    //     }
+    // }
+
+
+    &__dots{
+        li{
+            button{
+                width: 11px;
+                height: 11px;
+                border-radius: 100%;
+                margin-right: 10px;
+                margin-top: 20px;
+                &:last-child{
+                    margin-right:0;
+                }
+                background:#fff;
+                &::before{
+                    display: none;
+                }
+            }
+        }
+        li.slick-active{
+            button{
+                background:$main-color;
+            }
+        }
+    }
+
+    &__overlay{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #151515;
+        opacity: .9;
+    }
+
+    &__title{
+        text-align: center;
+    }
+    &__subtitle{
+        margin-top: 10px;
+        text-align: center;
+        color:#fff;
+    }
+    &__text{
+        color: #cccccc;
+    }
+
+    &__wrapper{
+        margin-top: 50px;
+        // display: flex;
+        color:#fff;
+        justify-content: space-between;
+    }
+
+    &__item{
+        margin-left: 60px;
+        &:first-child{
+            margin: 0;
+        }
+
+        &-icon{
+            font-size: 52px;
+            color:$main-color;
+            text-align: center;
+        }
+
+        &-title{
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        &-descr{
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 500;
+            color:#a5a5a5;
+            width: 100%;
+            line-height: 1.8rem;
+        }
+    }
+}
+
+
+// .slick-dots{
+//     li{
+//         button{
+//             background:#fff;
+//             width: 5px;
+//             &::before{
+//                 display: none;
+//             }
+//         }
+//     }
+// }
