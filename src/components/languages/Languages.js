@@ -2,14 +2,14 @@ import LocalizedStrings from "react-localization"
 
 const languages = new LocalizedStrings({
     ru: {
-        title: 'Игорь Приймак - Front-End',
+        title: 'Игорь Приймак - Front-End Разработчик',
         promo__title: 'Привет,',
         promo__subtitle: 'Меня зовут Игорь Приймак',
         promo__info: 'Front-end разработчик',
         promo__btn: 'подробнее',
         about__title:'Обо мне',
         about__subtitle:'Позвольте представиться',
-        about__descr:'Меня зовут Игорь. Я начинающий Web-разработчик из города Одесса. Владею языками HTML, CSS. Имею базовые знания в языке программирования JavaScript.',
+        about__descr:'Меня зовут Игорь. Я начинающий Web-разработчик из города Одесса. Владею языками HTML, CSS. Имею базовые знания в языке программирования JavaScript и библиотеке React. Умею работать с Webpack, Gulp, а также работать с Photoshop, Zeplin, Figma.',
         about__main:'Профиль',
         name:'Имя:',
         myname:'Игорь Приймак',
@@ -43,14 +43,14 @@ const languages = new LocalizedStrings({
         consult_descr:'Отвечу на технические вопросы, помогу решить вопросы связанные с созданием, оптимизацией и поддержкой веб-сайтов.'
     },
     en: {
-        title:"Igor Pryimak - Front-End",
+        title:"Igor Pryimak - Front-End Developer",
         promo__title:'Hello,',
         promo__subtitle:"I'm Igor Pryimak",
         promo__info:'Front-end Developer',
         promo__btn:'MORE',
         about__title:'About',
         about__subtitle:'Let me introduce myself',
-        about__descr:"I'm Igor. I am beginner Web-Developer from Odessa. I know such languages like HTML, CSS. And some basic knowledge of the programming language - JavaScript.",
+        about__descr:"I'm Igor. I am beginner Web-Developer from Odessa. I know such languages like HTML, CSS. And some basic knowledge of the programming language JavaScript and React library. I can work with Webpack, Gulp, also can work with Photoshop, Zeplin, Figma.",
         about__main:'Profile',
         name:'Name:',
         myname:'Igor Pryimak',
@@ -79,20 +79,20 @@ const languages = new LocalizedStrings({
         services__title:'Services',
         services__subtitle:'What Can I Do For You?',
         web:'Web-Development',
-        web_descr:'I will develop, make up a website using modern technologies. I will adapt the site for mobile devices, optimize website speed, validate the layout according to w3c standards.',
+        web_descr:'I can develop, make up a website using modern technologies. I will adapt the site for mobile devices, optimize website speed, validate the layout according to w3c standards.',
         consult:'Consultancy',
-        consult_descr:'I will answer technical questions, help solve issues related to the creation, optimization and support of websites.'
+        consult_descr:'I can help with technical questions, help solve issues related to the creation, optimization and support of websites.'
 
     },
     ua: {
-        title:"Ігор Приймак - Front-End",
+        title:"Ігор Приймак - Front-End Розробник",
         promo__title:'Привiт,',
-        promo__subtitle:"Мене звуть Ігор Приймак",
+        promo__subtitle:"Мене звуть Ігор Приймак    ",
         promo__info:'Front-end розробник',
         promo__btn:'Більше',
         about__title:'Про мене',
         about__subtitle:'Дозвольте представитися',
-        about__descr:'Мене звати Ігор. Я початковий Web-розробник із міста Одеса. Володію мовами HTML, CSS. Маю базові знання у мові програмування JavaScript.',
+        about__descr:'Мене звати Ігор. Я початковий Web-розробник із міста Одеса. Володію мовами HTML, CSS. Маю базові знання у мові програмування JavaScript та бібліотеці React. Вмію працювати з Webpack, Gulp, а також працювати з Photoshop, Zeplin, Figma.',
         about__main:'Профіль',
         name:"Ім'я:",
         myname:'Ігор Приймак',

@@ -16,8 +16,8 @@ const About = ({ lang }) => {
         { name: 'CSS3', counter: 100 },
         { name: 'SASS/SCSS', counter: 100 },
         { name: 'Bootstrap', counter: 90 },
-        { name: 'Photoshop', counter: 70 },
         { name: 'Js', counter: 70 },
+        { name: 'React', counter: 50 },
     ]
 
     languages.setLanguage(lang);
@@ -43,7 +43,7 @@ const About = ({ lang }) => {
                                 </div>
 
                                 <div className="about__info-item">
-                                    <div className="title title_fz18 about__main-info">Возраст:</div>
+                                    <div className="title title_fz18 about__main-info">{languages.age}</div>
                                     <div className="about__info-descr">19</div>
                                 </div>
 
