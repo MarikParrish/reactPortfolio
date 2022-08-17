@@ -15,7 +15,7 @@ import Pageup from '../pageup/Pageup';
 
 function App() {
 
-    const [lang, setLang] = useState('ru');
+    const [lang, setLang] = useState(localStorage.getItem('localLanguage') !== null ? localStorage.getItem('localLanguage') : 'ru');
 
     const onChangeLang = (lang) => {
         setLang(lang);
@@ -23,7 +23,7 @@ function App() {
 
     return (
         <>
-            <Promo onLang={onChangeLang}/>
+            <Promo onLang={onChangeLang} lang={lang}/>
             <About lang={lang}/>
             <Resume lang={lang}/>
             <Portfolio lang={lang}/>
