@@ -67,7 +67,7 @@ const Portfolio = ({ lang }) => {
 
         window.addEventListener('resize', updateWidth);
 
-    }, [screenWidth])
+    }, [screenWidth, lang])
 
     const FirstRow = () => {
         return (
@@ -75,7 +75,7 @@ const Portfolio = ({ lang }) => {
                 return (
                     <a rel="noopener noreferrer" target='_blank' key={i} href={item.link} onClick={(e) => item.link === "#" ? e.preventDefault() : null} className="portfolio__item">
                         <div ref={el => overlayFirstRefs.current[i] = el} className="portfolio__item-overlay">
-                            <div className={screenWidth > 1024 ? 'portfolio__item-block' : 'portfolio__item-block portfolio__item-block-active'}>
+                            <div className={screenWidth > 1023 ? 'portfolio__item-block' : 'portfolio__item-block portfolio__item-block-active'}>
                                 <div className="portfolio__item-text">{item.name}</div>
                                 <div className="portfolio__item-descr">{item.descr}</div>
                             </div>
@@ -96,7 +96,7 @@ const Portfolio = ({ lang }) => {
                 return (
                     <a rel="noopener noreferrer" target='_blank' key={i} href={item.link} onClick={(e) => item.link === "#" ? e.preventDefault() : null} className="portfolio__item">
                         <div ref={el => overlaySecondRefs.current[i] = el} className="portfolio__item-overlay">
-                            <div className={screenWidth > 1024 ? 'portfolio__item-block' : 'portfolio__item-block portfolio__item-block-active'}>
+                            <div className={screenWidth > 1023 ? 'portfolio__item-block' : 'portfolio__item-block portfolio__item-block-active'}>
                                 <div className="portfolio__item-text">{item.name}</div>
                                 <div className="portfolio__item-descr">{item.descr}</div>
                             </div>
