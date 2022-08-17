@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 import clouds from './img/clouds.jpg';
 import games from './img/games.jpg';
@@ -14,14 +14,17 @@ import './portfolio-media.scss';
 const Portfolio = ({ lang }) => {
 
 
+    const [screenWidth, setScreenWidth] = useState(window.screen.width);
+
+
     const firstRow = [
         { name: 'UberX', descr: 'Web Design', img: uberx, link: './uberx/index.html' },
         { name: 'Wordpress', descr: 'Web Design', img: wordpress, link: './wordpress/index.html' },
-        { name: 'Coming Soon', descr: 'Web Design', img: pulse, link: '#' },
-    ];
-    
-    const secondRow = [
         { name: 'Games', descr: 'Web Design', img: games, link: './games/index.html' },
+    ];
+
+    const secondRow = [
+        { name: 'Coming Soon', descr: 'Web Design', img: pulse, link: '#' },
         { name: 'Coming Soon', descr: 'Web Design', img: clouds, link: '#' },
         { name: 'Coming Soon', descr: 'Web Design', img: lighthouse, link: '#' },
     ]
@@ -32,78 +35,80 @@ const Portfolio = ({ lang }) => {
     const overlayFirstRefs = useRef([]);
     const overlaySecondRefs = useRef([]);
 
+    const updateWidth = () => {
+        setScreenWidth(window.screen.width);
+    }
+
     useEffect(() => {
         overlayFirstRefs.current.forEach(item => {
 
             item.addEventListener('mouseover', () => {
-                if (window.screen.width > 1023)
+                if (screenWidth > 1023)
                     item.children[0].classList.add('portfolio__item-block-active');
             })
 
             item.addEventListener('mouseout', () => {
-                if (window.screen.width > 1023)
+                if (screenWidth > 1023)
                     item.children[0].classList.remove('portfolio__item-block-active');
             })
         })
 
         overlaySecondRefs.current.forEach(item => {
             item.addEventListener('mouseover', () => {
-                if (window.screen.width > 1023)
+                if (screenWidth > 1023)
                     item.children[0].classList.add('portfolio__item-block-active');
             })
 
             item.addEventListener('mouseout', () => {
-                if (window.screen.width > 1023)
+                if (screenWidth > 1023)
                     item.children[0].classList.remove('portfolio__item-block-active');
             })
         })
 
-    }, [])
+        window.addEventListener('resize', updateWidth);
+
+    }, [screenWidth])
 
     const FirstRow = () => {
-        {
-            return (
-                firstRow.map((item, i) => {
-                    return (
-                        <a rel="noopener noreferrer" target='_blank' key={i} href={item.link} onClick={(e) => item.link === "#" ? e.preventDefault() : null} className="portfolio__item">
-                            <div ref={el => overlayFirstRefs.current[i] = el} className="portfolio__item-overlay">
-                                <div className={window.screen.width > 1024 ? 'portfolio__item-block' : 'portfolio__item-block portfolio__item-block-active'}>
-                                    <div className="portfolio__item-text">{item.name}</div>
-                                    <div className="portfolio__item-descr">{item.descr}</div>
-                                </div>
+        return (
+            firstRow.map((item, i) => {
+                return (
+                    <a rel="noopener noreferrer" target='_blank' key={i} href={item.link} onClick={(e) => item.link === "#" ? e.preventDefault() : null} className="portfolio__item">
+                        <div ref={el => overlayFirstRefs.current[i] = el} className="portfolio__item-overlay">
+                            <div className={screenWidth > 1024 ? 'portfolio__item-block' : 'portfolio__item-block portfolio__item-block-active'}>
+                                <div className="portfolio__item-text">{item.name}</div>
+                                <div className="portfolio__item-descr">{item.descr}</div>
                             </div>
+                        </div>
 
-                            <div className="portfolio__item-img">
-                                <img src={item.img} alt={item.name} />
-                            </div>
-                        </a>
-                    )
-                })
-            )
-        }
+                        <div className="portfolio__item-img">
+                            <img src={item.img} alt={item.name} />
+                        </div>
+                    </a>
+                )
+            })
+        )
     }
 
     const SecondRow = () => {
-        {
-            return (
-                secondRow.map((item, i) => {
-                    return (
-                        <a rel="noopener noreferrer" target='_blank' key={i} href={item.link} onClick={(e) => item.link === "#" ? e.preventDefault() : null} className="portfolio__item">
-                            <div ref={el => overlaySecondRefs.current[i] = el} className="portfolio__item-overlay">
-                                <div className={window.screen.width > 1024 ? 'portfolio__item-block' : 'portfolio__item-block portfolio__item-block-active'}>
-                                    <div className="portfolio__item-text">{item.name}</div>
-                                    <div className="portfolio__item-descr">{item.descr}</div>
-                                </div>
+        return (
+            secondRow.map((item, i) => {
+                return (
+                    <a rel="noopener noreferrer" target='_blank' key={i} href={item.link} onClick={(e) => item.link === "#" ? e.preventDefault() : null} className="portfolio__item">
+                        <div ref={el => overlaySecondRefs.current[i] = el} className="portfolio__item-overlay">
+                            <div className={screenWidth > 1024 ? 'portfolio__item-block' : 'portfolio__item-block portfolio__item-block-active'}>
+                                <div className="portfolio__item-text">{item.name}</div>
+                                <div className="portfolio__item-descr">{item.descr}</div>
                             </div>
+                        </div>
 
-                            <div className="portfolio__item-img">
-                                <img src={item.img} alt={item.name} />
-                            </div>
-                        </a>
-                    )
-                })
-            )
-        }
+                        <div className="portfolio__item-img">
+                            <img src={item.img} alt={item.name} />
+                        </div>
+                    </a>
+                )
+            })
+        )
     }
 
 
@@ -115,10 +120,10 @@ const Portfolio = ({ lang }) => {
                     <div className="title title_subtitle portfolio__subtitle">{languages.portfolio__subtitle}</div>
                     <div className="portfolio__wrapper">
                         <div className="portfolio__row-first">
-                            <FirstRow/>
+                            <FirstRow />
                         </div>
                         <div className="portfolio__row-second">
-                            <SecondRow/>
+                            <SecondRow />
                         </div>
                     </div>
                 </div>
