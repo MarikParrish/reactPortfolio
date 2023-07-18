@@ -44,7 +44,7 @@ const About = ({ lang }) => {
 
                                 <div className="about__info-item">
                                     <div className="title title_fz18 about__main-info">{languages.age}</div>
-                                    <div className="about__info-descr">19</div>
+                                    <div className="about__info-descr">20</div>
                                 </div>
 
                                 <div className="about__info-item">
@@ -73,49 +73,6 @@ const About = ({ lang }) => {
                                         </div>
                                     )
                                 })}
-
-                                {/* <div className="about__info-item">
-                                    <div className="title title_fz18 about__main-info">HTML5</div>
-                                    <div className="about__info-bar">
-                                        <div><span className="counter">100%</span></div>
-                                    </div>
-                                </div>
-
-                                <div className="about__info-item">
-                                    <div className="title title_fz18 about__main-info">CSS3</div>
-                                    <div className="about__info-bar">
-                                        <div><span className="counter">100%</span></div>
-                                    </div>
-                                </div>
-
-                                <div className="about__info-item">
-                                    <div className="title title_fz18 about__main-info">SASS/SCSS</div>
-                                    <div className="about__info-bar">
-                                        <div><span className="counter">100%</span></div>
-                                    </div>
-                                </div>
-
-                                <div className="about__info-item">
-                                    <div className="title title_fz18 about__main-info">Bootstrap</div>
-                                    <div className="about__info-bar">
-                                        <div><span className="counter">90%</span></div>
-                                    </div>
-                                </div>
-
-                                <div className="about__info-item">
-                                    <div className="title title_fz18 about__main-info">Photoshop</div>
-                                    <div className="about__info-bar">
-                                        <div><span className="counter">70%</span></div>
-                                    </div>
-                                </div>
-
-                                <div className="about__info-item">
-                                    <div className="title title_fz18 about__main-info">JS</div>
-                                    <div className="about__info-bar">
-                                        <div><span className="counter">50%</span></div>
-                                    </div>
-                                </div> */}
-
 
                             </div>
 

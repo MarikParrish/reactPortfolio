@@ -24,8 +24,8 @@ const Portfolio = ({ lang }) => {
     ];
 
     const secondRow = [
-        { name: 'Coming Soon', descr: 'Web Design', img: pulse, link: '#' },
-        { name: 'Coming Soon', descr: 'Web Design', img: clouds, link: '#' },
+        { name: 'Pulse', descr: 'Web Design', img: pulse, link: './pulse/index.html' },
+        { name: 'BlueRex (React)', descr: 'Web Design', img: clouds, link: 'https://marikparrish.github.io/bluerex/' },
         { name: 'Coming Soon', descr: 'Web Design', img: lighthouse, link: '#' },
     ]
 

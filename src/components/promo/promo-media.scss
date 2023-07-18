@@ -1,4 +1,4 @@
-@media (max-width:1245px){
+    @media (max-width:1245px){
     .promo{
         &__subtitle{
             font-size: 50px;
@@ -17,7 +17,7 @@
             line-height:40px;
         }
 
-        &__info{
+        &__info, &__back{
             font-size: 18px;
         }
 
@@ -46,8 +46,16 @@
         }
         
 
-        &__info{
+        &__info, &__back{
             font-size: 16px;
+        }
+
+        &__icons{
+            width: 100%;
+            text-align: center;
+            a{
+                padding-left: 30px;
+            }
         }
         
     }
@@ -70,13 +78,15 @@
             font-size: 18px;
         }
 
-        &__info{
+        &__info,&__back{
             font-size: 11px;
             padding: 0 10px;
         }
 
         &__icons{
             letter-spacing:0.4rem;
+            width: 100%;
+            text-align: center;
 
             a{
                 padding-left: 23px;
