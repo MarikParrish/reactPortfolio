@@ -1,0 +1,41 @@
+:root {
+    --index: calc(1vw + 1vh);
+}
+
+.notfound {
+    
+    &__error {
+        // font-size: 200px;
+        font-size: calc(var(--index) * 7.5);
+        line-height: calc(var(--index) * 7.5);
+        color:#cc005f;
+        letter-spacing: .1rem;
+        font-weight: bold;
+        // line-height: 160px;
+    }
+    
+    &__title {
+        color:#fff;
+        font-weight: 400;
+        line-height: calc(var(--index) * 2);
+        font-size: calc(var(--index) * 2);
+    }
+    &__return {
+        display: flex;
+        font-size:calc(var(--index) * 0.7);
+        letter-spacing:calc(var(--index) * 0.1);
+        height: calc(var(--index) * 2.4);
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0 20px;
+        line-height: 20px;
+        text-align: center;
+        border:3px solid hsla(0,0%,100%,.3);
+        align-items: center;
+        transition: all .5s;
+        border-radius: 5px;
+        &:hover{
+            border-color:#cc005f;
+        }
+    }
+}

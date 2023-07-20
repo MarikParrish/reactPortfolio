@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 
 import main_photo from './img/main_photo.jpg'
 import languages from '../languages/Languages';
@@ -51,9 +51,15 @@ const About = ({ lang }) => {
                                     <div className="title title_fz18 about__main-info">{languages.rank}</div>
                                     <div className="about__info-descr">{languages.myrank}</div>
                                 </div>
+
                                 <div className="about__info-item">
                                     <div className="title title_fz18 about__main-info">{languages.gmail}</div>
                                     <div className="about__info-descr">marikparrish@gmail.com</div>
+                                </div>
+
+                                <div className="about__info-item">
+                                    <div className="title title_fz18 about__main-info">{languages.telegram}</div>
+                                    <Link to='https://t.me/MarikParrish' className="about__info-descr">@marikparrish</Link>
                                 </div>
 
                             </div>

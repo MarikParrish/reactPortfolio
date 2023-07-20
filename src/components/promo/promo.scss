@@ -101,17 +101,6 @@ a{
         border-right:1px solid gray;
         border-left:1px solid gray;
     }
-
-    &__back{
-        margin-top: 10px;
-        font-size: 20px;
-        color:#fff;
-        text-transform: uppercase;
-        letter-spacing:.2rem;
-        padding: 0 20px;
-        line-height: 20px;
-        text-align: center;
-    }
     
     &__btn{
         position: relative;
@@ -141,7 +130,6 @@ a{
         }
         &:hover{
             border-color:#cc005f;
-            color:#fff;
         }
     }
 
