@@ -16,11 +16,15 @@ const About = ({ lang }) => {
         { name: 'CSS3', counter: 100 },
         { name: 'SASS/SCSS', counter: 100 },
         { name: 'Bootstrap', counter: 90 },
-        { name: 'Js', counter: 70 },
-        { name: 'React', counter: 50 },
+        { name: 'Wordpress', counter: 90 },
+        { name: 'Js', counter: 80 },
+        { name: 'React', counter: 70 },
     ]
 
     languages.setLanguage(lang);
+
+    let currentDate = new Date();
+    let birthday = currentDate.getMonth() >= 1 && currentDate.getDate() >= 17 ? currentDate.getFullYear() - 2003 : currentDate.getFullYear() - 2004;
 
     return (
         <>
@@ -44,7 +48,7 @@ const About = ({ lang }) => {
 
                                 <div className="about__info-item">
                                     <div className="title title_fz18 about__main-info">{languages.age}</div>
-                                    <div className="about__info-descr">20</div>
+                                    <div className="about__info-descr">{birthday}</div>
                                 </div>
 
                                 <div className="about__info-item">
@@ -74,7 +78,7 @@ const About = ({ lang }) => {
                                         <div key={i} className="about__info-item">
                                             <div className="title title_fz18 about__main-info">{item.name}</div>
                                             <div className="about__info-bar">
-                                                <div style={{width:item.counter + '%'}}><span className="counter">{item.counter}%</span></div>
+                                                <div style={{ width: item.counter + '%' }}><span className="counter">{item.counter}%</span></div>
                                             </div>
                                         </div>
                                     )

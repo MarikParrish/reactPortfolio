@@ -5,13 +5,11 @@
 .notfound {
     
     &__error {
-        // font-size: 200px;
         font-size: calc(var(--index) * 7.5);
         line-height: calc(var(--index) * 7.5);
         color:#cc005f;
         letter-spacing: .1rem;
         font-weight: bold;
-        // line-height: 160px;
     }
     
     &__title {
